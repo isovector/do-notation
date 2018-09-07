@@ -1,5 +1,5 @@
 name:                do-notation
-version:             0.1.0.0
+version:             0.1.0.1
 github:              "isovector/do-notation"
 license:             BSD3
 author:              "Sandy Maguire"
@@ -13,7 +13,7 @@ extra-source-files:
 synopsis:            Generalize do-notation to work on monads and indexed monads simultaneously.
 category:            Language
 
-description:         Please see the README on GitHub at <https://github.com/isovector/do-syntax#readme>
+description:         Please see the README on GitHub at <https://github.com/isovector/do-notation#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -23,7 +23,7 @@ library:
   source-dirs: src
 
 tests:
-  do-syntax-test:
+  do-notation-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
