@@ -1,5 +1,6 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-# LANGUAGE InstanceSigs               #-}
+{-# LANGUAGE PolyKinds                  #-}
 {-# LANGUAGE ScopedTypeVariables        #-}
 {-# LANGUAGE TypeApplications           #-}
 
@@ -12,6 +13,7 @@ module Control.Monad.Trans.Ix
 import           Control.Monad (MonadPlus (..))
 import           Control.Monad.Indexed
 import           Data.Coerce (coerce)
+import           Data.Kind (Type)
 import qualified Prelude as P
 import           Prelude hiding (Monad (..), pure)
 
@@ -24,7 +26,7 @@ import           Prelude hiding (Monad (..), pure)
 -- GeneralizedNewtypeDeriving can be used to get the instances of 'IxFunctor',
 -- 'IxPointed', 'IxApplicative', 'IxMonad', 'IxMonadZero' and 'IxMonadPlus' for
 -- free.
-newtype Ix m i j a = Ix
+newtype Ix (m :: Type -> Type) i j a = Ix
   { runIx :: m a
   }
   deriving (Functor, Applicative, P.Monad)
