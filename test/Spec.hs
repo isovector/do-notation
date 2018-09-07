@@ -7,7 +7,7 @@
 {-# LANGUAGE TypeFamilies               #-}
 {-# LANGUAGE TypeOperators              #-}
 
-import           Control.Monad (void)
+import           Control.Monad (void, fail)
 import           Control.Monad.Indexed
 import           Control.Monad.Trans.Ix
 import           Data.Coerce
