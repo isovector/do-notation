@@ -1,0 +1,8 @@
+resolver: lts-11.9
+
+packages:
+- .
+
+extra-deps:
+- indexed-0.1.3
+

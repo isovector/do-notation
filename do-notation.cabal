@@ -1,0 +1,51 @@
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 6deab61fda18704141cc5ccf5c9b5142d143670251c26751b5219b6b1102335d
+
+name:           do-notation
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/isovector/do-syntax#readme>
+homepage:       https://github.com/isovector/do-notation#readme
+bug-reports:    https://github.com/isovector/do-notation/issues
+author:         Sandy Maguire
+maintainer:     sandy@sandymaguire.me
+copyright:      2018 Sandy Maguire
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/isovector/do-notation
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_do_notation
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , indexed
+  default-language: Haskell2010
+
+test-suite do-syntax-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_do_notation
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , do-syntax
+    , indexed
+  default-language: Haskell2010
