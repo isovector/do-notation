@@ -2,12 +2,12 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1c6165d413f70264592696fc50a574b3b258c9311e510f6e59be27738443ed2a
+-- hash: b472048deb2d5a109b0be918e2b031fca161e3a4ae74f65216e74809e1a8ebb9
 
 name:           do-notation
-version:        0.1.0.0
+version:        0.1.0.1
 synopsis:       Generalize do-notation to work on monads and indexed monads simultaneously.
-description:    Please see the README on GitHub at <https://github.com/isovector/do-syntax#readme>
+description:    Please see the README on GitHub at <https://github.com/isovector/do-notation#readme>
 category:       Language
 homepage:       https://github.com/isovector/do-notation#readme
 bug-reports:    https://github.com/isovector/do-notation/issues
@@ -39,7 +39,7 @@ library
     , indexed
   default-language: Haskell2010
 
-test-suite do-syntax-test
+test-suite do-notation-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
