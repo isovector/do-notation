@@ -31,4 +31,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - do-syntax
+    - do-notation
