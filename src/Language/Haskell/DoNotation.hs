@@ -46,7 +46,7 @@ class PureSyntax (x :: Type -> Type) where
 
 
 instance {-# INCOHERENT #-}
-      P.Monad m => PureSyntax m where
+      Applicative m => PureSyntax m where
   pure = P.pure
 
 instance (IxMonad m, j ~ i) => PureSyntax (m i j) where

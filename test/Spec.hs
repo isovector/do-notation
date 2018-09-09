@@ -27,6 +27,12 @@ main = do
 
 
 ------------------------------------------------------------------------------
+-- |
+monadUnecessary :: Applicative m => m ()
+monadUnecessary = pure ()
+
+
+------------------------------------------------------------------------------
 -- | Function that uses both monads and indexed monads in do blocks.
 iShouldCompile :: IO ()
 iShouldCompile = do

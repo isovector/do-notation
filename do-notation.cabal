@@ -2,10 +2,10 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b472048deb2d5a109b0be918e2b031fca161e3a4ae74f65216e74809e1a8ebb9
+-- hash: a7db8ed39cac7873ea190b76badd179cecdd8a807162156015f04abc2027521d
 
 name:           do-notation
-version:        0.1.0.1
+version:        0.1.0.2
 synopsis:       Generalize do-notation to work on monads and indexed monads simultaneously.
 description:    Please see the README on GitHub at <https://github.com/isovector/do-notation#readme>
 category:       Language
