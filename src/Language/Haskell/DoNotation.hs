@@ -45,7 +45,7 @@ class PureSyntax (x :: Type -> Type) where
   return = pure
 
 
-instance {-# INCOHERENT #-}
+instance {-# OVERLAPS #-}
       Applicative m => PureSyntax m where
   pure = P.pure
 
@@ -69,7 +69,7 @@ class BindSyntax (x :: Type -> Type)
 instance  (P.Monad m, x ~ m) => BindSyntax m x m where
   (>>=) = (P.>>=)
 
-instance {-# INCOHERENT #-}
+instance {-# OVERLAPS #-}
       ( IxMonad m
       , x ~ m i j
       , y ~ m j k
