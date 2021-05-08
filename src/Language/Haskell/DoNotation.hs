@@ -7,18 +7,18 @@
 {-# LANGUAGE UndecidableInstances   #-}
 
 ------------------------------------------------------------------------------
--- | This module provides new implementations for '(>>=)', '(>>)', 'pure' and
+-- | This module provides new implementations for '>>=', '>>', 'pure' and
 -- 'return' so that they will work simultaneously with both regular and indexed
 -- monads.
 --
 -- Intended usage:
 --
--- @@
---   {-# LANGUAGE RebindableSyntax #-}
+-- @
+--   {-\# LANGUAGE RebindableSyntax \#-}
 --
---   import Language.Haskell.DoNotation
---   import Prelude hiding (Monad (..), pure)
--- @@
+--   import "Language.Haskell.DoNotation"
+--   import "Prelude" hiding ('Monad' (..), 'pure')
+-- @
 module Language.Haskell.DoNotation
   ( BindSyntax (..)
   , PureSyntax (..)
@@ -54,7 +54,7 @@ instance (IxMonad m, j ~ i) => PureSyntax (m i j) where
 
 
 ------------------------------------------------------------------------------
--- | Typeclass that provides '(>>=)' and '(>>)'.
+-- | Typeclass that provides '>>=' and '>>'.
 class BindSyntax (x :: Type -> Type)
                  (y :: Type -> Type)
                  (z :: Type -> Type)
